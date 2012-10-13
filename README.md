@@ -86,3 +86,15 @@ All the configuration is done in a single XML file
 Usage
 =====
 
+To install hazelcast only call include_recipe 'hazelcast' in your own recipes.
+
+By default, it will be installed on /opt/hazelcast and it uses upstart as init system.
+
+Hazelcast is more about development with its libraries than a server itself.  Please read the official
+documentation of Hazelcast at the following URL:
+
+	http://www.hazelcast.com/screencast.jsp
+
+License
+=======
+
