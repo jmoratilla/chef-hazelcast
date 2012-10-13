@@ -97,3 +97,4 @@ documentation of Hazelcast at the following URL:
 License
 =======
 
+Kudos to the creators of Hazelcast, this is just a script. Please respect the work done, and improve it as you wish.
