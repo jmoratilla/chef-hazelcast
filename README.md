@@ -1,15 +1,14 @@
 Description
 ===========
-Cookbook for install hazelcast server community edition. 
+Hazelcast is feature-rich, enterprise-ready and developer-friendly in-memory data grid solution.
+This cookbook installs the Community Edition and allows you to configure it.  See more at
 
 URL http://www.hazelcast.com/products-community.jsp
-
-
 
 Requirements
 ============
 
-Hazelcast is a java based server, so it requires java cookbook.  Also,
+Hazelcast is a java server, so it requires java cookbook.  Also,
 it requires ark cookbook to ease download of the appropiate version of
 the server.
 
@@ -86,7 +85,7 @@ All the configuration is done in a single XML file
 Usage
 =====
 
-To install hazelcast only call include_recipe 'hazelcast' in your own recipes.
+To install hazelcast only use *include_recipe 'hazelcast'* in your own recipes.
 
 By default, it will be installed on /opt/hazelcast and it uses upstart as init system.
 
