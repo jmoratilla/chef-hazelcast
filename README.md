@@ -8,6 +8,7 @@ URL http://www.hazelcast.com/products-community.jsp
 
 Requirements
 ============
+
 Hazelcast is a java based server, so it requires java cookbook.  Also,
 it requires ark cookbook to ease download of the appropiate version of
 the server.
@@ -19,71 +20,74 @@ Attributes
 All the configuration is done in a single XML file
 
 
-# Default attribute list for hazelcast
-default['hazelcast']['version']="2.3.1"
-#default['hazelcast']['url'] = "http://www.hazelcast.com/files/hazelcast-#{node['hazelcast']['version']}.zip"
-default['hazelcast']['base_dir']="/opt"
-default['hazelcast']['current_dir']="/opt/hazelcast"
-default['hazelcast']['user'] = "hazelcast"
-default['hazelcast']['start_server']="/bin/server.sh"
+# attribute list for hazelcast
+
+default['hazelcast']['version']
+default['hazelcast']['base_dir']
+default['hazelcast']['current_dir']
+default['hazelcast']['user']
+default['hazelcast']['start_server']
 
 # Attributes for template
-default['hazelcast']['group_username']="dev"
-default['hazelcast']['group_password']="dev-pass"
-default['hazelcast']['mgmt_center_enabled']="false"
-default['hazelcast']['network_port_auto_increment']="true"
-default['hazelcast']['network_multicast_enabled']="true"
-default['hazelcast']['network_multicast_group']="224.2.2.3"
-default['hazelcast']['network_multicast_port']="54327"
-default['hazelcast']['network_tcp_ip_enabled']="false"
-default['hazelcast']['network_tcp_ip_interface']="127.0.0.1"
-default['hazelcast']['network_aws_enabled']="false"
-default['hazelcast']['network_aws_access_key']="my_aws_access_key"
-default['hazelcast']['network_aws_secret_key']="my_aws_secret_key"
-default['hazelcast']['network_aws_region']="us-west-1"
-default['hazelcast']['network_aws_security_group']="hazelcast-sg"
-default['hazelcast']['network_interfaces_enabled']="false"
-default['hazelcast']['network_interfaces_networks']=["10.0.2.*","10.10.1.*"]
-default['hazelcast']['network_ssl_enabled']="false"
-default['hazelcast']['network_socket_interceptor']="false"
-default['hazelcast']['network_ssl_sym_encryption_enabled']="false"
-default['hazelcast']['network_ssl_sym_encryption_alg']="PBEWithMD5AndDES"
-default['hazelcast']['network_ssl_sym_encryption_salt']="thesalt"
-default['hazelcast']['network_ssl_sym_encryption_password']="thepass"
-default['hazelcast']['network_ssl_sym_encryption_iteration_count']="19"
-default['hazelcast']['network_ssl_asym_encryption_enabled']="false"
-default['hazelcast']['network_ssl_asym_encryption_alg']="RSA/NONE/PKCS1PADDING"
-default['hazelcast']['network_ssl_asym_encryption_key_password']="thekeypass"
-default['hazelcast']['network_ssl_asym_encryption_key_alias']="local"
-default['hazelcast']['network_ssl_asym_encryption_store_type']="JKS"
-default['hazelcast']['network_ssl_asym_encryption_store_password']="thestorepass"
-default['hazelcast']['network_ssl_asym_encryption_store_path']="keystore"
-default['hazelcast']['partition_group_enabled']="false"
-default['hazelcast']['executor_core_pool_size']="16"
-default['hazelcast']['executor_max_pool_size']="64"
-default['hazelcast']['executor_keep_alive_seconds']="60"
-default['hazelcast']['queue_name']="default"
-default['hazelcast']['queue_max_size_per_jvm']="0"
-default['hazelcast']['queue_backing_map_ref']="default"
-default['hazelcast']['map_name']="default"
-default['hazelcast']['map_backup_count']="1"
-default['hazelcast']['map_async_backup_count']="0"
-default['hazelcast']['map_ttl_seconds']="0"
-default['hazelcast']['map_max_idle_seconds']="0"
-default['hazelcast']['map_eviction_policy']="NONE"
-default['hazelcast']['map_max_size_policy']="0"
-default['hazelcast']['map_eviction_percentage']="25"
-default['hazelcast']['map_merge_policy']="hz.ADD_NEW_ENTRY"
-# TODO: check this works
-default['hazelcast']['semaphore_enabled']=false
-default['hazelcast']['semaphore_name']="default"
-default['hazelcast']['semaphore_initial_permits']="10"
-default['hazelcast']['semaphore_factory_enabled']="true"
-default['hazelcast']['semaphore_factory_class_name']="com.acme.MySemaphoreFactory"
-# TODO: merge_policies
-# default['hazelcast']['merge_policies_enabled']="false"
 
+default['hazelcast']['group_username']
+default['hazelcast']['group_password']
+default['hazelcast']['mgmt_center_enabled']
+default['hazelcast']['network_port_auto_increment']
+default['hazelcast']['network_multicast_enabled']
+default['hazelcast']['network_multicast_group']
+default['hazelcast']['network_multicast_port']
+default['hazelcast']['network_tcp_ip_enabled']
+default['hazelcast']['network_tcp_ip_interface']
+default['hazelcast']['network_aws_enabled']
+default['hazelcast']['network_aws_access_key']
+default['hazelcast']['network_aws_secret_key']
+default['hazelcast']['network_aws_region']
+default['hazelcast']['network_aws_security_group']
+default['hazelcast']['network_interfaces_enabled']
+default['hazelcast']['network_interfaces_networks']
+default['hazelcast']['network_ssl_enabled']
+default['hazelcast']['network_socket_interceptor']
+default['hazelcast']['network_ssl_sym_encryption_enabled']
+default['hazelcast']['network_ssl_sym_encryption_alg']
+default['hazelcast']['network_ssl_sym_encryption_salt']
+default['hazelcast']['network_ssl_sym_encryption_password']
+default['hazelcast']['network_ssl_sym_encryption_iteration_count']
+default['hazelcast']['network_ssl_asym_encryption_enabled']
+default['hazelcast']['network_ssl_asym_encryption_alg']
+default['hazelcast']['network_ssl_asym_encryption_key_password']
+default['hazelcast']['network_ssl_asym_encryption_key_alias']
+default['hazelcast']['network_ssl_asym_encryption_store_type']
+default['hazelcast']['network_ssl_asym_encryption_store_password']
+default['hazelcast']['network_ssl_asym_encryption_store_path']
+default['hazelcast']['partition_group_enabled']
+default['hazelcast']['executor_core_pool_size']
+default['hazelcast']['executor_max_pool_size']
+default['hazelcast']['executor_keep_alive_seconds']
+default['hazelcast']['queue_name']
+default['hazelcast']['queue_max_size_per_jvm']
+default['hazelcast']['queue_backing_map_ref']
+default['hazelcast']['map_name']
+default['hazelcast']['map_backup_count']
+default['hazelcast']['map_async_backup_count']
+default['hazelcast']['map_ttl_seconds']
+default['hazelcast']['map_max_idle_seconds']
+default['hazelcast']['map_eviction_policy']
+default['hazelcast']['map_max_size_policy']
+default['hazelcast']['map_eviction_percentage']
+default['hazelcast']['map_merge_policy']
 
+# TODO: check if this works
+
+default['hazelcast']['semaphore_enabled']
+default['hazelcast']['semaphore_name']
+default['hazelcast']['semaphore_initial_permits']
+default['hazelcast']['semaphore_factory_enabled']
+default['hazelcast']['semaphore_factory_class_name']
+
+# TODO: implement merge_policies
+
+default['hazelcast']['merge_policies_enabled']
 
 Usage
 =====
