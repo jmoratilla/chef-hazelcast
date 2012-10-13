@@ -1,24 +1,3 @@
-Description
-===========
-Cookbook for install hazelcast server community edition. 
-
-URL http://www.hazelcast.com/products-community.jsp
-
-
-
-Requirements
-============
-Hazelcast is a java based server, so it requires java cookbook.  Also,
-it requires ark cookbook to ease download of the appropiate version of
-the server.
-
-
-Attributes
-==========
-
-All the configuration is done in a single XML file
-
-
 # Default attribute list for hazelcast
 default['hazelcast']['version']="2.3.1"
 #default['hazelcast']['url'] = "http://www.hazelcast.com/files/hazelcast-#{node['hazelcast']['version']}.zip"
@@ -82,9 +61,4 @@ default['hazelcast']['semaphore_factory_enabled']="true"
 default['hazelcast']['semaphore_factory_class_name']="com.acme.MySemaphoreFactory"
 # TODO: merge_policies
 # default['hazelcast']['merge_policies_enabled']="false"
-
-
-
-Usage
-=====
 
