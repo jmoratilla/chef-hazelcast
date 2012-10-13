@@ -20,7 +20,7 @@ Attributes
 All the configuration is done in a single XML file
 
 
-## list of attributes used to deploy the server
+## Attributes used to deploy the server
 
 	default['hazelcast']['version']
 	default['hazelcast']['base_dir']
@@ -28,7 +28,7 @@ All the configuration is done in a single XML file
 	default['hazelcast']['user']
 	default['hazelcast']['start_server']
 
-# Attributes for template
+## Attributes for config file hazelcast.xml
 
 	default['hazelcast']['group_username']
 	default['hazelcast']['group_password']
@@ -76,17 +76,11 @@ All the configuration is done in a single XML file
 	default['hazelcast']['map_max_size_policy']
 	default['hazelcast']['map_eviction_percentage']
 	default['hazelcast']['map_merge_policy']
-
-# TODO: check if this works
-
 	default['hazelcast']['semaphore_enabled']
 	default['hazelcast']['semaphore_name']
 	default['hazelcast']['semaphore_initial_permits']
 	default['hazelcast']['semaphore_factory_enabled']
 	default['hazelcast']['semaphore_factory_class_name']
-
-# TODO: implement merge_policies
-
 	default['hazelcast']['merge_policies_enabled']
 
 Usage
