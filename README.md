@@ -20,7 +20,7 @@ Attributes
 All the configuration is done in a single XML file
 
 
-# Attribute list for hazelcast
+## list of attributes used to deploy the server
 
 	default['hazelcast']['version']
 	default['hazelcast']['base_dir']
