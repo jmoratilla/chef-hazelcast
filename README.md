@@ -5,6 +5,8 @@ This cookbook installs the Community Edition and allows you to configure it.  Se
 
 URL http://www.hazelcast.com/products-community.jsp
 
+Kudos to the creators of Hazelcast, this is just a script. Please respect the work done, and improve it as you wish.
+
 Requirements
 ============
 
@@ -97,4 +99,4 @@ documentation of Hazelcast at the following URL:
 License
 =======
 
-Kudos to the creators of Hazelcast, this is just a script. Please respect the work done, and improve it as you wish.
+Released under the MIT License: www.opensource.org/licenses/mit-license.php
